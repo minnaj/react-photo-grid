@@ -1,0 +1,14 @@
+.background {
+  text-align: center;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #2f4f4f;
+}
