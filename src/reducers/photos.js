@@ -1,8 +1,6 @@
 import {
   FETCH_PHOTOS,
-  SELECT_PHOTO,
-  PHOTOS_FETCHED,
-  FETCH_FAILED
+  PHOTOS_FETCHED
 } from '../actions'
 
 const photos = (state = [], action) => {
@@ -11,8 +9,6 @@ const photos = (state = [], action) => {
       return state
     case PHOTOS_FETCHED:
       return action.data
-    case SELECT_PHOTO:
-      return state
     default:
       return state
   }

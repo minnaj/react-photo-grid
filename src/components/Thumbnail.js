@@ -1,17 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Thumbnail = ({ id, albumId, title, url, thumbnailUrl, style }) => (
-  <img src={thumbnailUrl} alt={title} />
+const Thumbnail = ({ photo, onClick }) => (
+  <img 
+    src={photo.thumbnailUrl} 
+    alt={photo.title} 
+    onClick={onClick} />
 )
 
 Thumbnail.propTypes = {
-  id: PropTypes.number.isRequired,
-  albumId: PropTypes.number,
-  title: PropTypes.string,
-  url: PropTypes.string,
-  thumbnailUrl: PropTypes.string.isRequired,
-  style: PropTypes.object
+  photo: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    albumId: PropTypes.number,
+    title: PropTypes.string,
+    url: PropTypes.string,
+    thumbnailUrl: PropTypes.string.isRequired
+  }).isRequired,
+  style: PropTypes.object,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Thumbnail

@@ -1,5 +1,6 @@
 export const FETCH_PHOTOS = 'FETCH_PHOTOS'
 export const SELECT_PHOTO = 'SELECT_PHOTO'
+export const DESELECT_PHOTO = 'DESELECT_PHOTO'
 export const PHOTOS_FETCHED = 'PHOTOS_FETCHED'
 export const FETCH_FAILED = 'FETCH_FAILED'
 
@@ -10,9 +11,15 @@ export const fetchPhotos = () => {
   }
 }
 
-export const selectPhoto = photo => {
+export const selectPhoto = (photo) => {
   return {
     type: SELECT_PHOTO,
     photo
+  }
+}
+
+export const deselectPhoto = () => {
+  return {
+    type: DESELECT_PHOTO
   }
 }

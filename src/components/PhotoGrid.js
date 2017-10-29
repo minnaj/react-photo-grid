@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Thumbnail from './Thumbnail'
+import { selectPhoto } from '../actions'
 
 class PhotoGrid extends React.Component {
   constructor(props) {
@@ -19,12 +20,12 @@ class PhotoGrid extends React.Component {
     return (
       <ul>
         {photoArray.map((photo, index) => {
-          return (<Thumbnail 
-            key={index}
-            id={photo.id}
-            albumId={photo.albumId}
-            title={photo.title} 
-            thumbnailUrl={photo.thumbnailUrl} />)
+          return (
+            <Thumbnail 
+              key={index}
+              photo={photo} 
+              onClick={() => this.props.selectPhoto(photo)} />
+            )
         })}
       </ul>
     )
