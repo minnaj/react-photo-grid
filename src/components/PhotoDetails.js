@@ -2,21 +2,24 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Photo from './Photo'
 
-class PhotoDetails extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+/**
+ * Component which displays a single photo and its title.
+ * Hidden if user has not selected a photo.
+ */
 
+class PhotoDetails extends React.Component {
   render() {
-    if (!this.props.photo) {
-      return (<p>No photo selected</p>)
-    }
+    if (!this.props.photo) return (<div></div>)
+
     var photo = this.props.photo
     return (
       <div>
+        <div className="grid-header">Photo details</div>
         <Photo photo={this.props.photo} />
-        <p>{photo.title}</p>
-        <a onClick={() => this.props.deselectPhoto()}>
+        <p className="photo-details">
+          <span className="photo-title">Title:</span> {photo.title}
+        </p>
+        <a onClick={() => this.props.deselectPhoto()} className="back-button">
           Back
         </a>
       </div>

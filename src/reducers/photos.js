@@ -1,12 +1,13 @@
 import {
-  FETCH_PHOTOS,
   PHOTOS_FETCHED
 } from '../actions'
 
+/**
+ * Reducer which saves the retrieved photos to Redux state.
+ */
+
 const photos = (state = [], action) => {
   switch (action.type) {
-    case FETCH_PHOTOS:
-      return state
     case PHOTOS_FETCHED:
       return action.data
     default:

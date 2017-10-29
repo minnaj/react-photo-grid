@@ -2,6 +2,10 @@ import { connect } from 'react-redux'
 import { selectPhoto, deselectPhoto } from '../actions'
 import PhotoDetails from '../components/PhotoDetails'
 
+/**
+ * Container which connects the PhotoDetails component to Redux state.
+ */
+
 const mapStateToProps = state => {
   return {
     photo: state.photo

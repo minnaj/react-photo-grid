@@ -2,7 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Photo = ({ photo }) => (
-  <img src={photo.url} alt={photo.title} />
+  <img 
+    className="photo"
+    src={photo.url} 
+    alt={photo.title} />
 )
 
 Photo.propTypes = {

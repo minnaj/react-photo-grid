@@ -3,6 +3,10 @@ import {
   DESELECT_PHOTO
 } from '../actions'
 
+/**
+ * Reducer which sets the selected photo.
+ */
+
 const photo = (state = null, action) => {
   switch (action.type) {
     case SELECT_PHOTO:

@@ -14,7 +14,6 @@ const store = createStore(
 )
 
 sagaMiddleware.run(rootSaga)
-//const action = type => store.dispatch({type})
 
 render(
   <Provider store={store}>

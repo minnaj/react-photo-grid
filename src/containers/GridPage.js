@@ -2,8 +2,13 @@ import { connect } from 'react-redux'
 import { fetchPhotos, selectPhoto } from '../actions'
 import PhotoGrid from '../components/PhotoGrid'
 
+/**
+ * Container which connects the PhotoGrid component to Redux state.
+ */
+
 const mapStateToProps = state => {
   return {
+    photo: state.photo,
     photos: state.photos
   }
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const Thumbnail = ({ photo, onClick }) => (
   <img 
+    className="thumbnail"
     src={photo.thumbnailUrl} 
     alt={photo.title} 
     onClick={onClick} />

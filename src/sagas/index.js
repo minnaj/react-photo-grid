@@ -5,6 +5,10 @@ import {
   FETCH_PHOTOS
 } from '../actions'
 
+/**
+ * Saga which retrieves photos from JSONPlaceholder API asynchronously.
+ */
+
 function fetchPhotosApi() {
   return fetch('http://jsonplaceholder.typicode.com/photos')
     .then((response) => response.json())
